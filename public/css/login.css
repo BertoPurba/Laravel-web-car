@@ -1,0 +1,106 @@
+/* Reset some default styles */
+
+a {
+    color: rgb(247, 247, 247);
+    font-family: Georgia, serif;
+    text-decoration: none;
+    font-size: 120%;
+    }
+
+body, h2, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background: rgba(0, 0, 0, 0.3); /* Background semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container styles */
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px; /* Melengkungkan sudut kontainer */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    z-index: 1; /* Pastikan kontainer muncul di atas background */
+}
+
+/* Logo styles */
+#logo {
+    width: 150px;
+    border-radius: 12px; /* Melengkungkan sudut gambar */
+    margin-bottom: 20px;
+}
+
+/* Login form styles */
+.login-form {
+    padding: 20px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Melengkungkan sudut input */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Melengkungkan sudut tombol */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Background blur effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.3); /* Background abu-abu dengan transparansi */
+    backdrop-filter: blur(10px); /* Efek blur */
+    z-index: -1; /* Pastikan efek blur di belakang konten */
+}
+
+#reg {
+    color: black;
+}

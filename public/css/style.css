@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header nav ul li a:hover {
+    color: rgb(3, 49, 49);
+}
+header nav ul li a {
+    transition: color 0.3s ease-in-out;
+}
+
+header img {
+    transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(0.9);
+}
+
+
+/* header nav ul li a:hover {
+    font-size: 138%;
+}
+header nav ul li a {
+    transition: font-size 0.3s ease-in-out;
+} */
+
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.models-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em 0;
+}
+
+.model {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    width: calc(33% - 2em);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px; /* Membuat sudut model agak bulat */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang melebihi border-radius */
+}
+
+.model img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Membuat sudut gambar agak bulat */
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    padding: 0.7em 1.5em;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}

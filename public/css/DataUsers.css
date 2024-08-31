@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+
+.container {
+    width: 1500px;
+    max-width: 1450px;
+    background-color: #fff;
+    padding: 49px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table thead {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.user-table th, .user-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.user-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.edit-btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.edit-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+
+.edit-btn:hover, .delete-btn:hover {
+    opacity: 0.9;
+}
+
+
+
+
+
+header nav ul li a:hover {
+    color: rgb(3, 49, 49);
+}
+header nav ul li a {
+    transition: color 0.3s ease-in-out;
+}
+
+.logout-button {
+    background-color: #000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 93%; /* Hapus garis bawah */
+}
+.logout-button {
+    transition: color 0.3s ease-in-out;
+}
+.logout-button:hover {
+    color: #333; /* Warna saat hover */
+}
+
+
+.all {
+    display: flex;
+    perspective: 10px;
+    transform: perspective(300px) rotateX(20deg);
+    will-change: perspective;
+    perspective-origin: center center;
+    transition: all 1.3s ease-out;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+.all:hover {
+    perspective: 1000px;
+    transition: all 1.3s ease-in;
+    transform: perspective(10000px) rotateX(0deg);
+    .text {
+    opacity: 1;
+    }
+    & > div {
+    opacity: 1;
+    transition-delay: 0s;
+    }
+    .explainer {
+    opacity: 0;
+    }
+}
+
+.left, .center, .right, .lefter, .righter {
+    width: 200px;
+    height: 150px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px 5px rgba(156, 213, 11, 0.4);
+    opacity: 0;
+    transition: all .3s ease;
+    transition-delay: 1s;
+    position: relative;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #58d;
+    cursor: pointer;
+    background-blend-mode: color-burn;
+    
+    &:hover {
+    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+    background-color: #ccf;
+    }
+}
+.text {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all .3s ease;
+    bottom: 0;
+    left: 5px;
+    position: absolute;
+    will-change: transform;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(100, 100, 255, .6)
+}
+.lefter {
+    transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+    background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/organization-512.png);
+}
+.left {
+    transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+    background-image: url(http://ts2.mm.bing.net/th?id=OIP.t6338OygJjSsULRojIrCsAHaHa&pid=15.1);
+    
+}
+.center {
+    opacity: 1;
+    background-image: url(data:image/png;base64,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);
+}
+.right {
+    transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+    background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/app_window-512.png);
+}
+.righter {
+    transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+    background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/search-512.png);
+}
+.explainer {
+    font-weight: 300;
+    font-size: 2rem;
+    color: #fff;
+    transition: all .6s ease;
+    width: 100%;
+    height: 100%;
+    background-color: #303050;
+    background-image: radial-gradient(circle at center top, #cce, #33a);
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ref {
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #d80, #c00);
+    border-radius: 3px;
+    padding: 7px 10px;
+    position: absolute;
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
+    color: #000000;
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+    &::first-letter {
+    font-size: 12px;
+    }
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}

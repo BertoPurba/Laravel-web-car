@@ -1,0 +1,88 @@
+/* File: pageEdit.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Form Styles */
+.form-control {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control input[type="text"],
+.form-control input[type="int"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.form-control input[type="text"]:focus,
+.form-control input[type="int"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    padding: 8px 16px; /* Mengurangi padding untuk memperkecil tombol */
+    font-size: 14px; /* Mengurangi ukuran font */
+    border-radius: 5px;
+    width: 150px; /* Mengatur lebar tombol */
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto; /* Mengatur tombol agar tetap di tengah */
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Centered Form */
+.center {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.center form {
+    max-width: 600px;
+    margin: auto;
+}
