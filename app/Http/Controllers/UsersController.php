@@ -95,7 +95,7 @@ return view('App.Admin.home.users' , $view_data);
         ->update([
             'name' => $name, 
             'email' => $email, 
-            'email_verified' => $email_verified,
+            'email_verified' => $email_verified
         ]);
         return redirect("/dataUsers");
     }

@@ -7,6 +7,97 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Keyframes untuk slide-in dari atas */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Terapkan animasi pada navbar */
+header nav ul li {
+    animation: slideInFromTop 1.5s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Tambahkan delay untuk item-item di navbar agar muncul satu per satu */
+header nav ul li:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+header nav ul li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+header nav ul li:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* Terapkan animasi untuk logo */
+header img {
+    animation: fadeIn 1.5s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+
+
+
+/* Keyframes untuk fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes untuk slide-in dari bawah */
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Terapkan animasi pada elemen saat halaman dimuat */
+.intro, .models-overview, .heritage, .innovation {
+    animation: fadeIn 1.5s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards; /* Memastikan elemen tetap terlihat setelah animasi */
+}
+
+.intro h1, .models-overview h2, .heritage h2, .innovation h2 {
+    animation: slideInFromBottom 1.5s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Tambahkan sedikit delay untuk elemen lain agar muncul bertahap */
+.intro p, .models-overview .model, .heritage p, .innovation p {
+    animation: fadeIn 1.5s ease-in-out 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.models-overview .model img {
+    animation: slideInFromBottom 1.5s ease-in-out 0.7s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+
 header {
     background-color: #000;
     color: #fff;
@@ -82,7 +173,7 @@ main {
 
 .intro h1 {
     font-size: 3em;
-    color: #007bff;
+    color: #000000;
     margin-bottom: 0.5em;
 }
 
@@ -98,7 +189,7 @@ main {
 .intro .btn {
     font-size: 1.1em;
     color: #fff;
-    background-color: #007bff;
+    background-color: #000000;
     padding: 0.8em 2em;
     border: none;
     border-radius: 25px;
@@ -107,7 +198,7 @@ main {
 }
 
 .intro .btn:hover {
-    background-color: #0056b3;
+    background-color: #000000;
 }
 
 .models-overview {
@@ -148,7 +239,7 @@ main {
 
 .models-overview .model h3 {
     font-size: 1.8em;
-    color: #007bff;
+    color: #000000;
     margin-bottom: 0.5em;
 }
 

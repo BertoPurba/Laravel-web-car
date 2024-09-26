@@ -16,13 +16,13 @@
     </style>
 </head>
 <body>
-    <header>
+<header>    
     <a href="/dashboard"><img src="https://tse2.mm.bing.net/th?id=OIP.rIY7QrJ_LmdIKmc_K3oyIgHaGR&pid=Api&P=0&h=220" alt="Logo"></a>
         <nav>
             <ul>
                 <li><a href="/dashboard">Home</a></li>
                 <li><a href="/model/911">Models</a></li>
-                <li>
+                <li class="logout-form">
                     <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                         @csrf
                         <button type="submit" class="logout-button">Logout</button>
@@ -31,6 +31,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="model-nav">
             <ul>
@@ -43,7 +44,7 @@
         <section class="model-grid">
         
         @foreach ( $posts as $post )
-            <div class="model">
+            <div class="model hidden">
                 <center>
                 <a href="{{ url("/posts911/$post->id")}} "><img src="{{ $post->image }}" alt="718 Cayman" id="size-model"></a>
                 </center>
@@ -55,5 +56,27 @@
         @endforeach
         </section>
     </main>
+
+    <script>
+    // Menggunakan Intersection Observer untuk mendeteksi kapan elemen muncul di viewport
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        // Mendaftarkan setiap elemen yang memiliki class 'hidden'
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+    });
+</script>
+
+
+
 </body>
 </html>

@@ -41,17 +41,37 @@
             </ul>
         </section>
         <section class="model-grid">
-            @foreach ($posts as $post)
-                <div class="model">
-                    <center>
-                        <a href="{{ url("/posts718/$post->id")}} "><img src="{{ $post->image }}" alt="718 Cayman" id="size-model"></a>
-                    </center>
-                    <p>{{ $post->name_car }}</p>
-                    <p>From $ {{ number_format($post->harga) }}</p>
-                    <br>
-                </div> 
-            @endforeach
-        </section>
-    </main>
+    @foreach ($posts as $post)
+        <div class="model hidden"> <!-- Tambah class hidden -->
+            <center>
+                <a href="{{ url("/posts718/$post->id")}} "><img src="{{ $post->image }}" alt="718 Cayman" id="size-model"></a>
+            </center>
+            <p>{{ $post->name_car }}</p>
+            <p>From $ {{ number_format($post->harga) }}</p>
+            <br>
+        </div> 
+    @endforeach
+</section>
+</main>
+
+<script>
+    // Menggunakan Intersection Observer untuk mendeteksi kapan elemen muncul di viewport
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        // Mendaftarkan setiap elemen yang memiliki class 'hidden'
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+    });
+</script>
+
 </body>
 </html>
